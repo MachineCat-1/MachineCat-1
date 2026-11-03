@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="在此填写一句话简介（占位）">
+  <meta name="theme-color" content="#f7f5f1">
+  <title>在此填写姓名 · 个人主页</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!--
+  个人主页模板。搜索「在此填写」和「占位」，换成你的内容。
+  只改文字即可，尖括号里的英文标签不用动。详细步骤见 README.md。
+  多一条经历：复制整段 <article class="entry"> … </article>。
+  少一条：把对应的 article 整段删掉。某一整节不用时，删掉 section，并删掉页首导航里的链接。
+-->
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  <header class="site-header">
+    <div class="wrap hero">
+      <!--
+        头像可选。不用就保留圆标，或把这一行删掉。
+        要用照片时改成：<img class="avatar" src="photo.jpg" alt="在此填写姓名">
+        图片放在仓库根目录，文件名与 src 一致。
+      -->
+      <p class="avatar" aria-hidden="true">名</p>
+      <div>
+        <h1>在此填写姓名</h1>
+        <p class="tagline">在此填写一句话简介（占位）。例如：某某方向在读 / 现于某单位从事某工作 / 正在准备公务员考试。</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="template-banner">模板提示：带有「在此填写」或「占位」的文字都要换成你自己的内容，没有的条目整段删掉。填完后删除这一段（class 为 template-banner 的 p 标签）。</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="页内导航">
+    <div class="wrap">
+      <ul>
+        <li><a href="#about">关于</a></li>
+        <li><a href="#education">教育</a></li>
+        <li><a href="#experience">经历</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#publications">成果</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <h2 id="about-title">关于我</h2>
+        <div class="prose">
+          <p>在此填写自我介绍（占位）。可以写你目前在做什么、关心什么问题、希望别人如何认识你。下面整段只为展示版式，请替换。</p>
+          <p>示例（占位，请删除）：我目前在示例大学攻读示例专业，也在准备示例方向的选拔。这段不是真实经历。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <h2 id="education-title">教育经历</h2>
+        <!-- 按时间从近到远排列。不需要第二条时，删除下面第二个 article。 -->
+        <article class="entry">
+          <div class="entry-head">
+            <h3>在此填写学校名称</h3>
+            <p class="when">20XX.09 – 20XX.06（占位）</p>
+          </div>
+          <p class="role">在此填写学历 · 专业</p>
+          <p>在此填写教育经历说明（占位）。例如：主修方向、毕业论文题目或几门相关课程。</p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h3>在此填写另一段教育经历</h3>
+            <p class="when">20XX.09 – 20XX.06（占位）</p>
+          </div>
+          <p class="role">在此填写学历 · 专业（不需要本条就整段删除）</p>
+          <p>示例（占位）：本科就读于示例大学示例专业。此条只为占位。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <h2 id="experience-title">工作 / 研究经历</h2>
+        <!-- 工作、实习、科研、助教都可以写在这里。没有的经历不要编，直接删掉对应 article。 -->
+        <article class="entry">
+          <div class="entry-head">
+            <h3>在此填写单位或实验室</h3>
+            <p class="when">20XX.07 – 至今（占位）</p>
+          </div>
+          <p class="role">在此填写职位，例如：研究助理 / 实习生 / 工程师</p>
+          <p>在此填写你实际做过的事（占位）。写具体职责即可，例如负责哪一部分工作。不要照抄本句。</p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h3>在此填写另一段经历</h3>
+            <p class="when">20XX.03 – 20XX.06（占位）</p>
+          </div>
+          <p class="role">在此填写职位（不需要本条就整段删除）</p>
+          <p>示例（占位）：在示例单位参与示例课题的资料整理。此条不是真实经历。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <h2 id="projects-title">项目</h2>
+        <!-- 课程项目、个人项目、课题都可以。有链接再把注释里的 a 标签补上。 -->
+        <article class="entry">
+          <div class="entry-head">
+            <h3>在此填写项目名称</h3>
+            <p class="when">20XX（占位）</p>
+          </div>
+          <p class="role">在此填写项目类型，例如：课程项目 / 个人项目 / 课题</p>
+          <p>在此用两三句话说明项目做了什么、你负责哪一部分（占位）。</p>
+          <!-- 有链接时改成：<p class="links"><a href="https://实际地址">项目链接</a></p> -->
+          <p class="links">链接：在此填写（没有就删掉这行）</p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h3>示例项目名称（占位）</h3>
+            <p class="when">20XX（占位）</p>
+          </div>
+          <p class="role">个人项目（占位，不需要本条就整段删除）</p>
+          <p>示例（占位）：一个用于演示版式的项目条目，请替换或删除。</p>
+          <p class="links">链接：https://example.com/project（占位）</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" aria-labelledby="publications-title">
+      <div class="wrap">
+        <h2 id="publications-title">论文 / 专利</h2>
+        <!-- 论文、专利、预印本放在一起。整节都没有时，删掉本 section，并删掉导航里的「成果」。 -->
+        <article class="entry">
+          <div class="entry-head">
+            <h3>在此填写论文或专利标题</h3>
+            <p class="when">20XX（占位）</p>
+          </div>
+          <p class="role">在此填写作者。期刊 / 会议 / 专利号也写在这里</p>
+          <p>在此填写一句说明（占位）。例如：本人贡献，或目前状态（在投 / 已授权）。没有就删掉这句。</p>
+          <!-- 有链接时改成：<p class="links"><a href="https://实际地址">论文或专利链接</a></p> -->
+          <p class="links">链接：在此填写（没有就删掉这行）</p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h3>示例专利或论文标题（占位，不是真实成果）</h3>
+            <p class="when">20XX（占位）</p>
+          </div>
+          <p class="role">示例发明人（占位）. 专利号 XXXXXXX（占位）</p>
+          <p>示例（占位）：此条只说明专利可以和论文写在同一节。请替换或删除。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <h2 id="skills-title">技能</h2>
+        <!-- 每组里的 li 就是一项。按你的情况增删，分组名也可以改，例如改成「证书」「办公软件」。 -->
+        <div class="skill-block">
+          <h3>专业技能</h3>
+          <ul class="tags">
+            <li>在此填写技能</li>
+            <li>示例（占位）：数据分析</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h3>工具与编程</h3>
+          <ul class="tags">
+            <li>在此填写工具或语言</li>
+            <li>示例（占位）：Python</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h3>语言能力</h3>
+          <ul class="tags">
+            <li>在此填写语言及水平</li>
+            <li>示例（占位）：英语 · 读写</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title">联系方式</h2>
+        <!-- 不公开的项直接删掉对应的 div。需要电话或微信时，复制一组再改。 -->
+        <dl class="contact">
+          <div>
+            <dt>邮箱</dt>
+            <dd><a href="mailto:your.name@example.com">your.name@example.com</a>（占位，请替换）</dd>
+          </div>
+          <div>
+            <dt>GitHub</dt>
+            <dd><a href="https://github.com/MachineCat-1">github.com/MachineCat-1</a>（当前用户名，可改）</dd>
+          </div>
+          <div>
+            <dt>其他</dt>
+            <dd>在此填写个人主页、领英等（没有就删掉这行）</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 在此填写姓名</p>
+    </div>
+  </footer>
+</body>
+</html>
