@@ -1,0 +1,345 @@
+/* 个人主页样式。只改文字时不用动这个文件。
+   想换配色，改下面 :root 里的颜色即可。 */
+
+:root {
+  --bg: #f7f5f1;
+  --ink: #1c1915;
+  --muted: #5c574f;
+  --line: #e4dfd6;
+  --accent: #1e3a5f;
+  --banner-bg: #f3eee4;
+  --banner-ink: #4a4030;
+  --banner-line: #e3d5b8;
+  --page: 40rem;
+  --sans: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Source Han Sans SC",
+    "Microsoft YaHei", "WenQuanYi Micro Hei", "Droid Sans Fallback", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.25rem;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 20;
+  padding: 0.35rem 0.7rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0.6rem;
+}
+
+.wrap {
+  width: min(100% - 2.5rem, var(--page));
+  margin-inline: auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.1rem 1.25rem;
+  align-items: center;
+  padding-top: 2.75rem;
+}
+
+.avatar {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #f7f5f1;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+img.avatar {
+  object-fit: cover;
+  display: block;
+}
+
+h1 {
+  font-size: 1.85rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+
+.tagline {
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
+
+.template-banner {
+  margin: 1.35rem 0 0;
+  padding: 0.7rem 0.9rem;
+  background: var(--banner-bg);
+  color: var(--banner-ink);
+  border: 1px solid var(--banner-line);
+  border-radius: 8px;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin-top: 1.5rem;
+  background: rgba(247, 245, 241, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1.15rem;
+  margin: 0;
+  padding: 0.7rem 0;
+  list-style: none;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--accent);
+}
+
+main section {
+  padding: 2.1rem 0 0.25rem;
+}
+
+main section + section {
+  border-top: 1px solid var(--line);
+  margin-top: 2.1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.prose p + p {
+  margin-top: 0.75rem;
+}
+
+.entry + .entry {
+  margin-top: 1.35rem;
+}
+
+.entry {
+  padding-left: 0.95rem;
+  border-left: 2px solid var(--line);
+}
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.15rem 1rem;
+  align-items: baseline;
+}
+
+.entry h3 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.when {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.role {
+  margin-top: 0.12rem;
+  color: var(--accent);
+  font-size: 0.98rem;
+}
+
+.entry > p:not(.when):not(.role):not(.links) {
+  margin-top: 0.3rem;
+}
+
+.links {
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.skill-block + .skill-block {
+  margin-top: 1rem;
+}
+
+.skill-block h3 {
+  margin-bottom: 0.45rem;
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 0.12rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.contact {
+  margin: 0;
+}
+
+.contact div {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0.35rem 0.75rem;
+  padding: 0.65rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.contact dt {
+  color: var(--muted);
+}
+
+.contact dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.site-footer {
+  margin-top: 2.5rem;
+  padding: 1.25rem 0 2.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 26rem) {
+  .site-nav ul {
+    justify-content: space-between;
+    gap: 0.2rem;
+  }
+
+  .site-nav a {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .wrap {
+    width: min(100% - 2rem, var(--page));
+  }
+
+  .hero {
+    padding-top: 1.75rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .contact div {
+    grid-template-columns: 1fr;
+    gap: 0.05rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media print {
+  .skip-link,
+  .site-nav,
+  .template-banner {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 12pt;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .entry,
+  .skill-block,
+  .contact div {
+    break-inside: avoid;
+  }
+
+  .site-footer {
+    border-top: none;
+  }
+}
